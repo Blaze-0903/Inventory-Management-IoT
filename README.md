@@ -118,17 +118,4 @@ Feel free to **fork**, **raise issues**, or **submit pull requests**. Let's impr
 🚀 **ESP32, C++, Arduino IDE, Wokwi**  
 ```
 
----
-
-### **🔹 Next Steps for Your GitHub Repository**
-1. **Create the GitHub repository**:  
-   - Name it **`Inventory-Management-IoT`**.  
-2. **Upload your code and images**:
-   - Create a folder `images/` and add:
-     - `circuit_diagram.png`
-     - `working_circuit_weight.png`
-     - `working_circuit_temp_pressure.png`
-     - `circuit_led_on.png`
-3. **Copy & paste this `README.md`** into your repository.  
-4. **Commit & Push to GitHub**! 🎉  
 
