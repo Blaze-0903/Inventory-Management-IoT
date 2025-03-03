@@ -4,6 +4,7 @@ This project implements an **IoT-based Inventory Management System** using **ESP
 It measures **weight, temperature, and humidity** to track inventory levels, displaying real-time data on a **TFT LCD screen**.  
 An **LED indicator turns ON when the temperature exceeds 30°C**, signaling a critical condition.  
 
+---
 
 ## 📌 Features  
 ✅ Measures **Weight (kg)** using **HX711 Load Cell** for real-time inventory tracking  
@@ -12,6 +13,7 @@ An **LED indicator turns ON when the temperature exceeds 30°C**, signaling a cr
 ✅ **LED Indicator** turns **ON** when temperature **> 30°C**  
 ✅ Simulated in **Wokwi** and deployed on **ESP32**
 
+---
 
 ## 📷 Circuit Diagram & Working  
 
@@ -20,27 +22,28 @@ This is the complete circuit setup using ESP32, TFT LCD, HX711, DHT22, and an LE
 
 ![Screenshot 2025-02-25 102841](https://github.com/user-attachments/assets/cfa73541-4cec-425d-a842-14d9cd7cb63a)
 
-
+---
 
 ### 2️⃣ Working Circuit - Showing Weight Measurement  
 The **Load Cell (HX711)** measures the weight and displays it on the TFT LCD.  
 
 ![Screenshot 2025-02-28 102636](https://github.com/user-attachments/assets/7a329a4f-ac60-488c-8cbd-acbdce28c8f1)
 
-
+---
 
 ### 3️⃣ Working Circuit - Monitoring Temperature & Humidity  
 The **DHT22 sensor** measures the environmental temperature and humidity.  
 
 ![Screenshot 2025-02-28 102702](https://github.com/user-attachments/assets/474b2b01-2ea0-48f6-b536-d428a1b7eca5)
 
+---
 
 ### 4️⃣ LED Activation - Temperature > 30°C  
 When the **temperature exceeds 30°C**, the **LED turns ON**, indicating an alert condition.  
 
 ![Screenshot 2025-02-28 102817](https://github.com/user-attachments/assets/f994d4e1-f3d7-4910-b13e-f765e5929996)
 
-
+---
 
 ## 🛠 Components Used  
 - **ESP32 Dev Board**  
@@ -51,6 +54,7 @@ When the **temperature exceeds 30°C**, the **LED turns ON**, indicating an aler
 - **LED Indicator**  
 - **Jumper Wires & Resistors**
 
+---
 
 ## 🔌 Wiring Connections  
 
@@ -77,6 +81,7 @@ When the **temperature exceeds 30°C**, the **LED turns ON**, indicating an aler
 | Anode (+)           | GPIO 13       |
 | Cathode (-)         | GND (via 220Ω) |
 
+---
 
 ## 🚀 Getting Started  
 
