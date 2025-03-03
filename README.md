@@ -1,7 +1,4 @@
-# Inventory-Management-IoT
-
-
-## 📦 Inventory Management System using IoT 🌐  
+# 📦 Inventory Management System using IoT 🌐  
 
 This project implements an **IoT-based Inventory Management System** using **ESP32, Load Cell (HX711), and DHT22**.  
 It measures **weight, temperature, and humidity** to track inventory levels, displaying real-time data on a **TFT LCD screen**.  
