@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-hx711",
+      "id": "hx711",
+      "top": -45.4,
+      "left": 204.2,
+      "attrs": { "type": "50kg" }
+    },
+    { "type": "wokwi-ili9341", "id": "tft", "top": -354.4, "left": -29.1, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht22",
+      "top": 57.9,
+      "left": 196.2,
+      "attrs": { "temperature": "26.4" }
+    },
+    { "type": "wokwi-led", "id": "led", "top": 121.2, "left": -82.6, "attrs": { "color": "red" } },
+    { "type": "wokwi-gnd", "id": "gnd", "top": 240, "left": -192.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "resistor",
+      "top": 157.55,
+      "left": -182.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "hx711:GND", "esp:GND", "black", [] ],
+    [ "lcd:VCC", "esp:3V3", "red", [] ],
+    [ "lcd:GND", "esp:GND", "black", [] ],
+    [ "lcd:SCK", "esp:18", "green", [] ],
+    [ "lcd:MOSI", "esp:23", "orange", [] ],
+    [ "lcd:CS", "esp:5", "brown", [] ],
+    [ "lcd:DC", "esp:15", "purple", [] ],
+    [ "lcd:RESET", "esp:4", "gray", [] ],
+    [ "lcd:LED", "esp:3V3", "blue", [] ],
+    [ "dht:VCC", "esp:3V3", "red", [] ],
+    [ "dht:GND", "esp:GND", "black", [] ],
+    [ "dht:DATA", "esp:4", "yellow", [] ],
+    [ "led:K", "resistor:1", "black", [] ],
+    [ "led:A", "esp:13", "red", [ "v0" ] ],
+    [ "led:C", "resistor:2", "black", [ "v0" ] ],
+    [ "resistor:1", "gnd:GND", "black", [ "v0" ] ],
+    [ "dht22:VCC", "esp:3V3", "red", [ "v0", "h-48", "v57.6", "h-182.4", "v-201.6" ] ],
+    [ "dht22:SDA", "esp:4", "gold", [ "v19.2", "h-86.3", "v-48" ] ],
+    [ "dht22:GND", "esp:GND.3", "black", [ "v38.4", "h-124.8", "v-124.8" ] ],
+    [ "tft:VCC", "esp:3V3", "red", [ "v19.2", "h-19.2" ] ],
+    [ "tft:GND", "esp:GND.2", "black", [ "v19.2", "h76.8" ] ],
+    [ "tft:SCK", "esp:18", "green", [ "v28.8", "h47.99", "v144" ] ],
+    [ "tft:MOSI", "esp:23", "orange", [ "v48", "h47.99", "v57.6" ] ],
+    [ "tft:CS", "esp:5", "#8f4814", [ "v38.4", "h105.6", "v144" ] ],
+    [ "tft:D/C", "esp:15", "purple", [ "v57.6", "h105.6", "v182.4", "h-9.6" ] ],
+    [ "tft:RST", "esp:4", "gray", [ "v67.2", "h86.4", "v144" ] ],
+    [ "tft:LED", "esp:3V3", "blue", [ "v76.8", "h-86.41" ] ],
+    [ "hx711:VCC", "esp:3V3", "red", [ "h-124.8", "v19.2" ] ],
+    [ "hx711:GND", "esp:GND.3", "black", [ "h-28.8", "v105.3" ] ],
+    [ "hx711:DT", "esp:21", "gold", [ "h-38.4", "v85.9" ] ],
+    [ "hx711:SCK", "esp:22", "blue", [ "h-57.6", "v47.2" ] ]
+  ],
+  "dependencies": {}
+}
